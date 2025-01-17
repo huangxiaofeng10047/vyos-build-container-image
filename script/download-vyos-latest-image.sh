@@ -3,7 +3,7 @@
 set -e
 
 USERNAME="vyos"
-REPO="vyos-rolling-nightly-builds"
+REPO="vyos-nightly-builds"
 
 release_info=$(curl -s "https://api.github.com/repos/$USERNAME/$REPO/releases/latest")
 
