@@ -3,10 +3,10 @@
 set -e
 
 USERNAME="vyos"
-REPO="vyos-rolling-nightly-builds"
+REPO="674742659"
 
-release_info=$(curl -s "https://api.github.com/repos/$USERNAME/$REPO/releases/latest")
-echo "https://api.github.com/repos/$USERNAME/$REPO/releases/latest"
+release_info=$(curl -s "https://api.github.com/repositories/$REPO/releases/latest")
+echo "https://api.github.com/repositories/$REPO/releases/latest"
 echo "${release_info}"
 download_url=$(echo "$release_info" | jq -r '.assets[0].browser_download_url')
 
