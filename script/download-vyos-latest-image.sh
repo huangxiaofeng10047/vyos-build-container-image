@@ -6,7 +6,7 @@ USERNAME="vyos"
 REPO="vyos-nightly-builds"
 
 release_info=$(curl -s "https://api.github.com/repos/$USERNAME/$REPO/releases/latest")
-echo "$release_info"
+echo "https://api.github.com/repos/$USERNAME/$REPO/releases/latest"
 download_url=$(echo "$release_info" | jq -r '.assets[0].browser_download_url')
 
 tag_name=$(echo "$release_info" | jq -r '.tag_name' | rev | cut -c 5- | rev)
